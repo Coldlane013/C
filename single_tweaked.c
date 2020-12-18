@@ -1,18 +1,18 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-struct node *head = NULL;							//Initializing head as Null pointer NO MEMORY ALLOCATED YET 
+struct node *head = NULL;						//Initializing head as Null pointer NO MEMORY ALLOCATED YET 
 
-struct node											//Initializing container and pointer NO MEMORY ALLOCATED AS WELL
+struct node								//Initializing container and pointer NO MEMORY ALLOCATED AS WELL
 {
 	int data;                        				// how many bytes will be allocated here is dependent to data types
 	struct node *next;
 
 };
-void append()																	// Adding data while also creating node(container) for it.
+void append()								// Adding data while also creating node(container) for it.
 {
 	struct node *temp;
-	temp = (struct node*)malloc(sizeof(struct node)); 							// Allocating memory for node
+	temp = (struct node*)malloc(sizeof(struct node)); 		// Allocating memory for node
 	printf("Enter data:");
 	scanf("%d",&temp->data);
 	temp->next= NULL;   
@@ -25,9 +25,9 @@ void append()																	// Adding data while also creating node(container)
 		struct node *p=head;
 		while(p->next!=NULL)
 		{
-			p=p->next; 																// pointer changing address value until found 0
+			p=p->next; 				// pointer changing address value until found 0
 		}
-		p->next=temp; 																// data will connect to that node 
+		p->next=temp; 					// data will connect to that node 
 	}
 	printf("Data successfully added.PRESS a number again to continue...\n");
 }
